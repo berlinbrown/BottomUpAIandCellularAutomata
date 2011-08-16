@@ -1,0 +1,148 @@
+%
+% Equation Test and output for image export
+% with gimp
+\documentclass[prodmode,acmtecs]{acmsmall}
+
+\usepackage[ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+% Metadata Information
+\acmVolume{9}
+\acmNumber{4}
+\acmArticle{39}
+\acmYear{2010}
+\acmMonth{3}
+
+% Document starts
+\begin{document}
+
+% Page heads
+\markboth{G. Zhou et al.}{Equation Test}
+
+% Title portion
+\title{Equation Test}
+
+\begin{abstract}
+Data
+\end{abstract}
+
+\terms{Design, Algorithms, Performance}
+
+\keywords{Wireless sensor networks, media access control,
+multi-channel, radio interference, time synchronization}
+
+\acmformat{Zhou, G., Wu, Y., Yan, T., He, T., Huang, C., Stankovic,
+J. A., and Abdelzaher, T. F.  2010. A multifrequency MAC specially
+designed for  wireless sensor network applications.}
+
+\begin{bottomstuff}
+Data
+\end{bottomstuff}
+
+\maketitle
+
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{displaymath}
+\int H(x,x')\psi(x')dx' = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2}
+                          \psi(x)+V(x)\psi(x)
+\end{displaymath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Numbered Equation
+\begin{equation}
+\label{eqn:01}
+P(t)=\frac{b^{\frac{t+1}{T+1}}-b^{\frac{t}{T+1}}}{b-1},
+\end{equation}
+where $t=0,{\ldots}\,,T$, and $b$ is a number greater than $1$.
+
+according to the following equation:
+% Unnumbered Equation
+\[
+i=\lfloor(T+1)\log_b[\alpha(b-1)+1]\rfloor.
+\]
+It can be easily proven that the distribution of $i$ conforms to Equation
+(\ref{eqn:01}).
+
+% Algorithm
+\begin{algorithm}[t]
+\SetAlgoNoLine
+\KwIn{Node $\alpha$'s ID ($ID_{\alpha}$), and node $\alpha$'s
+neighbors' IDs within two communication hops.}
+\KwOut{The frequency number ($FreNum_{\alpha}$) node $\alpha$ gets assigned.}
+$index$ = 0; $FreNum_{\alpha}$ = -1\;
+\Repeat{$FreNum_{\alpha} > -1$}{
+        $Rnd_{\alpha}$ = Random($ID_{\alpha}$, $index$)\;
+        $Found$ = $TRUE$\;
+        \For{each node $\beta$ in $\alpha$'s two communication hops
+    }{
+      $Rnd_{\beta}$ = Random($ID_{\beta}$, $index$)\;
+      \If{($Rnd_{\alpha} < Rnd_{\beta}$) \text{or} ($Rnd_{\alpha}$ ==
+          $Rnd_{\beta}$ \text{and} $ID_{\alpha} < ID_{\beta}$)\;
+      }{
+        $Found$ = $FALSE$; break\;
+      }
+        }
+     \eIf{$Found$}{
+           $FreNum_{\alpha}$ = $index$\;
+         }{
+           $index$ ++\;
+     }
+      }
+\caption{Frequency Number Computation}
+\label{alg:one}
+\end{algorithm}
+
+Bus masters are divided into two disjoint sets, $\mathcal{M}_{RT}$
+and $\mathcal{M}_{NRT}$.
+% description
+\begin{description}
+\item[RT Masters]
+$\mathcal{M}_{RT}=\{ \vec{m}_{1},\dots,\vec{m}_{n}\}$ denotes the
+$n$ RT masters issuing real-time constrained requests. To model the
+current request issued by an $\vec{m}_{i}$ in $\mathcal{M}_{RT}$,
+three parameters---the recurrence time $(r_i)$, the service cycle
+$(c_i)$, and the relative deadline $(d_i)$---are used, with their
+relationships.
+\item[NRT Masters]
+$\mathcal{M}_{NRT}=\{ \vec{m}_{n+1},\dots,\vec{m}_{n+m}\}$ is a set
+of $m$ masters issuing nonreal-time constrained requests. In our
+model, each $\vec{m}_{j}$ in $\mathcal{M}_{NRT}$ needs only one
+parameter, the service cycle, to model the current request it
+issues.
+\end{description}
+
+\section{Simulator}
+\label{sec:sim}
+
+% enumerate
+\begin{enumerate}
+\item Load state into microcontroller model.
+\item For each assignment.
+      \begin{enumerate}
+      \item either call interrupt handler or simulate effect of next instruction, or
+      \item evaluate truth values of atomic propositions.
+      \end{enumerate}
+\item Return resulting states.
+\end{enumerate}
+
+% Figure
+
+\subsection{Problem Formulation}
+
+% Enunciations
+
+\begin{eqnarray}%
+s=\frac{10}{N_{1}}-\frac{10}{N_{2}}. \nonumber
+\end{eqnarray}%
+
+\end{document}
+

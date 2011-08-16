@@ -1,0 +1,16 @@
+Version of session file format:
+               1
+Time of storage:
+               "Mon Feb 21 21:37:10 Eastern Standard Time 2011"
+Layout:        VerticalP (TerminalP {paneGroups = fromList [], paneTabs = Just TopP, currentPage = 1, detachedId = Nothing, detachedSize = Nothing}) (HorizontalP (TerminalP {paneGroups = fromList [("Browser",HorizontalP (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Nothing, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 327)], paneTabs = Just BottomP, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) (TerminalP {paneGroups = fromList [], paneTabs = Just BottomP, currentPage = 0, detachedId = Nothing, detachedSize = Nothing}) 654) 1121
+Population:    [(Just (BufferSt (BufferState "C:\\projects\\tools\\cygwin\\home\\bbrown\\src\\tmp_zip\\doing\\doingitwrong_phase2\\scala2\\GameOfLife\\src\\haskell\\test\\src\\BaseLifeComponents.hs" 347)),[SplitP LeftP]),(Just (ErrorsSt ErrorsState),[SplitP RightP,SplitP TopP]),(Just (InfoSt (InfoState Nothing)),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP BottomP]),(Just (LogSt LogState),[SplitP RightP,SplitP BottomP]),(Just (BufferSt (BufferState "C:\\projects\\tools\\cygwin\\home\\bbrown\\src\\tmp_zip\\doing\\doingitwrong_phase2\\scala2\\GameOfLife\\src\\haskell\\test\\src\\Main.hs" 335)),[SplitP LeftP]),(Just (ModulesSt (ModulesState 401 (WorkspaceScope False,True) (Just (ModuleName ["BaseLifeComponents"]),Nothing) (ExpanderState {packageExp = ([],[]), packageExpNoBlack = ([],[]), packageDExp = ([],[]), packageDExpNoBlack = ([],[]), workspaceExp = ([],[]), workspaceExpNoBlack = ([],[]), workspaceDExp = ([],[]), workspaceDExpNoBlack = ([],[]), systemExp = ([],[]), systemExpNoBlack = ([],[])}))),[SplitP RightP,SplitP TopP,GroupP "Browser",SplitP TopP]),(Just (BufferSt (BufferState "C:\\projects\\tools\\cygwin\\home\\bbrown\\src\\tmp_zip\\doing\\doingitwrong_phase2\\scala2\\GameOfLife\\src\\haskell\\test\\src\\Test2.hs" 324)),[SplitP LeftP]),(Just (WorkspaceSt WorkspaceState),[SplitP RightP,SplitP BottomP])]
+Window size:   (1920,1024)
+Workspace:     Just "C:\\projects\\tools\\cygwin\\home\\bbrown\\src\\tmp_zip\\doing\\doingitwrong_phase2\\scala2\\GameOfLife\\src\\haskell\\hslek.lkshw"
+Active pane:   Just "Main.hs"
+Toolbar visible:
+               True
+FindbarState:  (True,FindState {entryStr = "", entryHist = [], replaceStr = "", replaceHist = [], caseSensitive = False, entireWord = False, wrapAround = False, regex = False, lineNr = 1})
+Recently opened files:
+               ["C:\\projects\\tools\\cygwin\\home\\bbrown\\src\\tmp_zip\\doing\\doingitwrong_phase2\\scala2\\GameOfLife\\src\\haskell\\test\\src\\Main.hs","C:\\Program Files\\Leksah\\leksah\\data\\welcome.txt"]
+Recently opened workspaces:
+               []

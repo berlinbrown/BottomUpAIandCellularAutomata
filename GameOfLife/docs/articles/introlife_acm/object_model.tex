@@ -1,0 +1,125 @@
+%%--------------------------------------
+%% Scala and Lift
+%%--------------------------------------
+\section{Object Model for Artificial Life Simulation}
+
+I propose a model for simulating basic cell life using a bottom-up approach.  I
+will look at modeling basic cells.  Adding DNA.  The cells survive and die in a
+primordial pool of water, sun.  Even with this basic demo, emergent behavior
+forms.
+
+
+I hope have made a case that organic life is interesting.  The machinery has
+already been created but we don't have a easy blueprint to recreate such complex
+life, we can only use knowledge base to model as much as we can.
+
+Here is a model for DNA. Game of Life, Cell Grid.
+
+2D visual simulation, cells, grid, iterations or cell game cycles, cell
+entities, bacteria.
+
+Bacteria Living bacteria cell, single celled organism.
+
+The most basic units in the life simulation consist of
+Chemical Life Elements.  This enumeration contain the element types.
+The element types are closely tied to the proteins on the grid
+but in reality they are synonymous with chemical life elements like Carbon, Oxygen, etc.
+
+Each grid in the life simulation consists of a chemical element unit.
+The element unit contains an element level or weight.  The elements
+react with other elements.
+
+The DNA represents the CODE in this simulation.
+We will decode the DNA code for protein synthesis.
+
+For the bacteria cell, DNA can effect:
+
+Size, weight, energy level, color, reproduction rate, 
+food consumption rate, ability to handle water, sunlight/temperatures.
+
+All forms of algae are composed of eukaryotic cells but for our demo, we are treating 
+Food/Algae as a type of non organic entity.  But the cells in our system feed on this non organic form of algae.
+
+When constructing the object model for this DNA simulation, I wanted to focus
+three key components, the DNA, mutations, cell properties or traits.  But also,
+there is some validation given to the water and the sunlight.  These attributes
+don't effect the system as much but are part of the environment.
+
+Model DNA bases, Adenine, Cytosine, Guanine, Thymine.
+
+alive, processDNA, produceProteins, onStepSimulationProcessCell,
+setImmutableSystemTraits, Genes, DNATranslationParser
+
+LivingEntityCell
+
+\subsection{Running the Simulation} 
+
+With this basic demo, already the system exhibits interesting properties.  We
+start with a few living cells.  Over time, cells are created, and cells die but
+the system stabalizes with  several dozen cells.  Once mutations start to occur,
+one form of entity tends to survive and the grid changes color.
+
+
+Radiation destroys units of protienunit.
+
+each cellwall_proteinchemicalelementgridunit has a bond level/strength...
+  ability to withstand --- radiationprotection_level
+    if radiationprotection_level < 10% then , destroyed...
+    
+    ....
+    
+    Flagellen requires energy level...   
+    
+    protein sytnehis only creates protein units, adds to ...
+    
+    
+    
+A cell has energy.
+
+What is the function of the cell wall??
+
+The cell wall will protect the cell from radiation.
+
+If raditation too high, cell dies.
+
+  * ProteinGridUnit Configuration determines raditation protection, chemical reaction.
+  * The configuration of the ProteinGridUnit determines protection radiotion level.
+  
+  FUNCTION may be inhibited.
+---
+
+My flagge protein only has one function, move in water.
+
+ -- if no flaggea proteins then you can't move.   
+ 
+ Different cell levels.
+
+1. Cell wall and flagella level
+
+2. Protein, amino acid, Chemical level <---- what is in this level????
+   What is in this level:  chemicals need to maintain the existence of this
+                          property.
+
+   Chemical Reaction between radiation of the sun and the protein on this cell
+   
+   -- Configuration -- proximity...takes energy...no energy force, dead...
+   
+      can a protein grid die??  no???  But more energy to do its job???
+      
+      configuration/count/strength//
+      
+  ProteinUnitGrid.
+
+
+Sun can damage the DNA...
+
+Why is water needed for life?  movement...
+
+Viruses can inhibit growth!!!!
+
+Bacteria CELL:
+DNA FOR PROTEIN SYTHNSEISIS
+
+ 
+ 
+

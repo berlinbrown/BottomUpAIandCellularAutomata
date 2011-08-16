@@ -1,0 +1,148 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Berlin Brown - berlin dot brown at gmail.com
+%% jvmbook - 
+%% Date: 1/11/2011
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Use report or article
+\documentclass[9pt]{article}
+
+\usepackage{fancyheadings}
+\usepackage{graphicx}
+\usepackage{latexsym}
+
+\usepackage{listings}
+
+\lstset{                        % Code
+language=Java,                  % choose the language of the code
+basicstyle=\footnotesize\ttfamily,
+%basicstyle=\small,             % the size of the fonts that are used for the
+%code numbers=\left,                   % where to put the line-numbers
+%numberstyle=\footnotesize,     % the size of the fonts that are used for the line-numbers
+stepnumber=2,                   % the step between two line-numbers. If it's 1 each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+%backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,	                % adds a frame around the code
+tabsize=2,	                    % sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...}            % if you want to add more keywords to the set
+}
+   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% topmargin - top margin page to header
+%% headheight - running head box
+%% headsep - height of head to body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\oddsidemargin = -0.4in
+\textwidth = 6.4in
+
+\headheight = 0in
+\headsep = 0in
+\topmargin = .05in
+\textheight = 9.8in
+
+\floatsep = .20in
+\textfloatsep = \floatsep
+\intextsep = \floatsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Artificial Life - Object Model for Bottom-Up Approach to ALife}
+
+\author{Berlin Brown\\
+  berlin.brown at gmail.com\\
+  Copyright 2011 Berlin Brown.  All rights reserved.\\ 
+  This work is licensed under a Creative Commons\\
+  Attribution-Noncommercial-No Derivative Works\\
+  Version 3.0 United States License. \\
+  Atlanta, Ga\\
+  \date{\today}}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Table of Contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+\begin{abstract}
+This article presents Botlist-Network (Botlist).  Botlist is a 
+web application and information retrieval system that aims to collect
+and analyze content from the vast world wide web.  Botlist is an specification
+for describing the platform, the Botlist web front end and the Botlist backend
+infrastructure for crawling and analyzing web documents and converting those
+documents into a machine readable format such as RDF semantic web formats.
+
+This article also looks at the use of several powerful open source programming
+languages.  Each language is used for it strenghs.
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% General Structure Notes:
+%%
+%% In my articles, I will question, what is artificial intelligence?
+%%        what is intelligence?  Why is human intelligence more interesting than
+%%     animal intelligence?
+%%
+%% Outline:
+%% 1. Overview
+%% 2. History of AI and Computing, Turing, VonNue, etc
+%%    History with ALife, Langton, GameOfLife
+%%
+%% Charles Darwin
+%% 1937 Alan Turing
+%% 1945 John von Neumann
+%%
+%% 1970 Cellular automaton, John Conway
+%% 1986 Christopher Langton
+%%
+%% 3. Basic biology and concepts
+%%     What is DNA?
+%%     What is the mitochondira?
+%%     What is RNA?
+%%     What is life?  Why is it interesting?
+%%
+%% 4. Modeling the biology
+%% 5. Overview of the demo application, object model
+%%    DNA
+%%    
+%% 6. More detail and code.
+%% 7. Java and Scala Swing / %% 8. Results
+%% 9. Summary and Future Direction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{overview}
+\include{history}
+\include{basic_biology}
+\include{biology_computing}
+\include{object_model}
+\include{biology_in_code}
+\include{results}
+\include{java_scala}
+\include{summary}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Bibliography (set the widest label)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{plain}
+\nocite{*}
+\bibliography{references}
+
+\end{document}
+%%--------------------------------------
+%% End of document 
+%%--------------------------------------

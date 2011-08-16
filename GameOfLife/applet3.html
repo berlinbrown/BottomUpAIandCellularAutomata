@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Applet Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <script src="deployJava.js"></script>
+  </head>
+  <body>
+    <h3>Cellular Automata Game of Life Applet</h3>    
+
+    <script>
+        var attributes = {
+        	    code:    'org.berlin.gol.sound.GameOfLifeSoundApplet',
+        	    archive: 'scala-library.jar,scala-swing.jar,gameoflifesound.jar',
+        	    width:400, height:400
+        	    };
+        var parameters = {  };
+        deployJava.runApplet(attributes, parameters, '1.6');
+    </script>
+  </body>
+</html>

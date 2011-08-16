@@ -1,0 +1,360 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% NOTE: WORK IN PROGRESS
+%
+% Modification to ACM sample.
+% Based on:
+% acmsmall-sample.tex, dated 15th July 2010
+% This is a sample file for ACM small trim journals
+%
+% Compilation using 'acmsmall.cls' - version 1.1, Aptara Inc.
+% (c) 2010 Association for Computing Machinery (ACM)
+%
+% Questions/Suggestions/Feedback should be addressed to => "acmtexsupport@aptaracorp.com".
+% Users can also go through the FAQs available on the journal's submission webpage.
+%
+% Steps to compile: latex, bibtex, latex latex
+%
+% For tracking purposes => this is v1.1 - July 2010
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[prodmode,acmtecs]{acmsmall}
+
+\usepackage{draftcopy}
+
+\usepackage{graphicx}
+\usepackage{type1cm}
+\usepackage{eso-pic}
+\usepackage{color}
+
+% Package to generate and customize Algorithm as per ACM style
+\usepackage[ruled]{algorithm2e}
+\renewcommand{\algorithmcfname}{ALGORITHM}
+\SetAlFnt{\small}
+\SetAlCapFnt{\small}
+\SetAlCapNameFnt{\small}
+\SetAlCapHSkip{0pt}
+\IncMargin{-\parindent}
+
+% Metadata Information
+\acmVolume{1}
+\acmNumber{1}
+\acmArticle{1}
+\acmYear{2011}
+\acmMonth{3}
+
+% Document starts
+\begin{document}
+
+% Page heads
+\markboth{Berlin Brown}{A Bottom-Up Approach for Artificial Life Simulations}
+
+\makeatletter
+\AddToShipoutPicture{%
+            \setlength{\@tempdimb}{.5\paperwidth}%
+            \setlength{\@tempdimc}{.5\paperheight}%
+            \setlength{\unitlength}{1pt}%
+            \put(\strip@pt\@tempdimb,\strip@pt\@tempdimc){%
+        \makebox(0,0){\rotatebox{45}{\textcolor[gray]{0.75}%
+        {\fontsize{6cm}{6cm}\selectfont{DRAFT}}}}%
+            }%
+}
+\makeatother
+
+% Title portion
+\title{A Bottom-Up Approach for Artificial Life Simulations}
+\author{Berlin Brown, berlin.brown@gmail.com
+\affil{Berlin Research}}
+
+\begin{abstract}
+The field of artificial intelligence in computer science focuses on many
+different areas of computing from computer vision to natural language
+processing.  These top-down approaches typically concentrate on human behavior
+or other animal functions. In this article we look at a bottom-up approach to
+artificial life and how emergent cell behavior can produce interesting results. 
+With this bottom-up alife approach, we are not interested in solving any
+particular task, but we are interested in observing the adapative nature of the
+entities in our simulation. We also wanted to introduce those more familiar with
+software engineering to biological systems and evolutionary theory concepts.
+\end{abstract}
+
+\category{C.2.2}{Artificial Intelligence}{Artificial Life}
+
+\terms{Evolution, Artificial Life, ALife, Artificial Intelligence}
+
+\keywords{Evolution, artificial life, alife, scala, java, bottom-up}
+
+\begin{bottomstuff}
+This work is supported by Berlin Research.
+
+Author's addresses: B. Brown, Atlanta Georgia
+\end{bottomstuff}
+
+\maketitle
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% General Structure Notes:
+%%
+%% In my articles, I will question, what is artificial intelligence?
+%%        what is intelligence?  Why is human intelligence more interesting than
+%%     animal intelligence?
+%%
+%% Outline:
+%% 1. Overview
+%% 2. History of AI and Computing, Turing, VonNue, etc
+%%    History with ALife, Langton, GameOfLife
+%%
+%% Charles Darwin
+%% 1937 Alan Turing
+%% 1945 John von Neumann
+%%      Wolfram
+%% 1970 Cellular automaton, John Conway
+%% 1986 Christopher Langton
+%%      Marvin Minsky
+%%s
+%% 3. Basic biology and concepts
+%%     What is DNA?
+%%     What is the mitochondira?
+%%     What is RNA?
+%%     What is life?  Why is it interesting?
+%%
+%% 4. Modeling the biology (artificial life, etc), biology computing, alife
+%%    Overview of the demo application, object model
+%%    DNA    
+%%    More detail and code.
+%%    Analyzing results
+%% 7. Java and Scala Swing / 
+%% 9. Summary and Future Direction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+
+% Basic overview and introduction
+\include{overview}
+
+% Basic biology concepts
+\include{basic_biology}
+
+% History of AI and ALife other key ai evolution people
+\include{history}
+
+% ALife, AI
+\include{biology_computing}
+
+% Our expirement
+\include{object_model}
+
+% Appendix, running the simulation.
+% Configuration, building, etc
+\include{java_scala}
+
+\include{summary}
+
+% Figure
+\begin{figure}
+\centerline{\includegraphics{moreScreenShotThruDemo}}
+\caption{Code before preprocessing.}
+\label{fig:one}
+\end{figure}
+
+
+\section{MMSN Protocol}
+
+\subsection{Frequency Assignment}
+
+We propose a suboptimal distribution to be used by each node, which is
+easy to compute and does not depend on the number of competing
+nodes. A natural candidate is an increasing geometric sequence, in
+which
+
+where $t=0,{\ldots}\,,T$, and $b$ is a number greater than $1$.
+
+In our algorithm, we use the suboptimal approach for simplicity and
+generality. We need to make the distribution of the selected back-off
+time slice at each node conform to what is shown in Equation
+(\ref{eqn:01}). It is implemented as follows: First, a random
+variable $\alpha$ with a uniform distribution within the interval
+$(0, 1)$ is generated on each node, then time slice $i$ is selected
+according to the following equation:
+
+So protocols [\citeNP{Bahl-02,Culler-01,Zhou-06,Adya-01,Culler-01};
+\citeNP{Tzamaloukas-01}; \citeNP{Akyildiz-01}] that use RTS/CTS
+controls\footnote{RTS/CTS controls are required to be implemented by
+802.11-compliant devices. They can be used as an optional mechanism
+to avoid Hidden Terminal Problems in the 802.11 standard and
+protocols based on those similar to \citeN{Akyildiz-01} and
+\citeN{Adya-01}.} for frequency negotiation and reservation are not
+suitable for WSN applications, even though they exhibit good
+performance in general wireless ad hoc
+networks.
+
+% Head 3
+\subsubsection{Exclusive Frequency Assignment}
+
+In exclusive frequency assignment, nodes first exchange their IDs
+among two communication hops so that each node knows its two-hop
+neighbors' IDs. 
+
+% Head 4
+\paragraph{Eavesdropping}
+
+Even though the even selection scheme leads to even sharing of
+available frequencies among any two-hop neighborhood, it involves a
+number of two-hop broadcasts. To 
+\subsection{Basic Notations}
+
+As Algorithm~\ref{alg:one} states, for each frequency
+number, each node calculates a random number (${\textit{Rnd}}_{\alpha}$) for
+itself and a random number (${\textit{Rnd}}_{\beta}$) for each of its two-hop
+neighbors with the same pseudorandom number generator.
+
+Bus masters are divided into two disjoint sets, $\mathcal{M}_{RT}$
+and $\mathcal{M}_{NRT}$.
+% description
+\begin{description}
+\item[RT Masters]
+$\mathcal{M}_{RT}=\{ \vec{m}_{1},\dots,\vec{m}_{n}\}$ denotes the
+$n$ RT masters issuing real-time constrained requests. To model the
+current request issued by an $\vec{m}_{i}$ in $\mathcal{M}_{RT}$,
+three parameters---the recurrence time $(r_i)$, the service cycle
+$(c_i)$, and the relative deadline $(d_i)$---are used, with their
+relationships.
+\item[NRT Masters]
+$\mathcal{M}_{NRT}=\{ \vec{m}_{n+1},\dots,\vec{m}_{n+m}\}$ is a set
+of $m$ masters issuing nonreal-time constrained requests. In our
+model, each $\vec{m}_{j}$ in $\mathcal{M}_{NRT}$ needs only one
+parameter, the service cycle, to model the current request it
+issues.
+\end{description}
+
+Here, a question may arise, since each node has a global ID. Why
+don't we just map nodes' IDs within two hops into a group of
+frequency numbers and assign those numbers to all nodes within two
+hops?
+
+\section{Simulator}
+\label{sec:sim}
+
+If the model checker requests successors of a state which are not
+created yet, the state space uses the simulator to create the
+successors on-the-fly.
+
+\subsection{Problem Formulation}
+
+The objective of variable coalescence-based offset assignment is to find
+both the coalescence scheme and the MWPC on the coalesced graph. We start
+with a few definitions and lemmas for variable coalescence.
+
+% Enunciations
+\begin{definition}[Coalesced Node (C-Node)]A C-node is a set of
+live ranges (webs) in the AG or IG that are coalesced. Nodes within the same
+C-node cannot interfere with each other on the IG. Before any coalescing is
+done, each live range is a C-node by itself.
+\end{definition}
+
+\begin{definition}[C-AG (Coalesced Access Graph)]The C-AG is the access
+graph after node coalescence, which is composed of all C-nodes and C-edges.
+\end{definition}
+
+\begin{lemma}
+The C-MWPC problem is NP-complete.
+\end{lemma}
+\begin{proof} C-MWPC can be easily reduced to the MWPC problem assuming a
+coalescence graph without any edge or a fully connected interference graph.
+Therefore, each C-node is an uncoalesced live range after value separation
+and C-PC is equivalent to PC. A fully connected interference graph is made
+possible when all live ranges interfere with each other. Thus, the C-MWPC
+problem is NP-complete.
+\end{proof}
+
+\begin{lemma}[Lemma Subhead]The solution to the C-MWPC problem is no
+worse than the solution to the MWPC.
+\end{lemma}
+\begin{proof}
+Simply, any solution to the MWPC is also a solution to the
+C-MWPC. But some solutions to C-MWPC may not apply to the MWPC (if any
+coalescing were made).
+\end{proof}
+
+\section{Performance Evaluation}
+
+During all the experiments, the Geographic Forwarding (GF)
+\cite{Akyildiz-01} routing protocol is used. GF exploits geographic
+information of nodes and conducts local data-forwarding to achieve
+end-to-end routing. Our simulation is
+configured according to the settings in
+Table~\ref{tab:one}. Each run lasts for 2 minutes and
+repeated 100 times. For each data value we present in the results,
+we also give its 90\% confidence interval.
+
+\section{Conclusions}
+
+In this article, we develop the first multifrequency MAC protocol for
+WSN applications in which each device adopts a
+single radio transceiver. The different MAC design requirements for
+WSNs and general wireless ad-hoc networks are
+compared, and a complete WSN multifrequency MAC design (MMSN) is
+put forth. During the MMSN design, we analyze and evaluate different
+choices for frequency assignments and also discuss the nonuniform
+back-off algorithms for the slotted media access design.
+
+% Appendix
+\appendix
+\section*{APPENDIX}
+\setcounter{section}{1}
+In this appendix, we measure
+the channel switching time of Micaz \cite{CROSSBOW} sensor devices.
+In our experiments, one mote alternatingly switches between Channels
+11 and 12. Every time after the node switches to a channel, it sends
+out a packet immediately and then changes to a new channel as soon
+as the transmission is finished. We measure the
+number of packets the test mote can send in 10 seconds, denoted as
+$N_{1}$. In contrast, we also measure the same value of the test
+mote without switching channels, denoted as $N_{2}$. We calculate
+the channel-switching time $s$ as
+\begin{eqnarray}%
+s=\frac{10}{N_{1}}-\frac{10}{N_{2}}. \nonumber
+\end{eqnarray}%
+By repeating the experiments 100 times, we get the average
+channel-switching time of Micaz motes: 24.3$\mu$s.
+
+\appendixhead{ZHOU}
+
+% Acknowledgments
+\begin{acks}
+The authors would like to thank Dr. Maura Turolla of Telecom
+Italia for providing specifications about the application scenario.
+\end{acks}
+
+% Bibliography
+\bibliographystyle{acmsmall}
+\bibliography{acmsmall-sam}
+
+% History dates
+\received{March 2011}{March 2011}{March 2011}
+
+% Electronic Appendix
+\elecappendix
+
+\medskip
+
+\section{This is an example of Appendix section head}
+
+By repeating experiments 100 times, we get the average
+channel-switching time of Micaz motes: 24.3 $\mu$s. We then conduct
+the same experiments with different Micaz motes, as well as
+experiments with the transmitter switching from Channel 11 to other
+channels. In both scenarios, the channel-switching time does not have
+obvious changes. (In our experiments, all values are in the range of
+23.6 $\mu$s to 24.9 $\mu$s.)
+
+\section{Appendix section head}
+
+The primary consumer of energy in WSNs is idle listening. The key to
+reduce idle listening is executing low duty-cycle on nodes. Two
+primary approaches are considered in controlling duty-cycles in the
+MAC layer.
+
+\end{document}
+

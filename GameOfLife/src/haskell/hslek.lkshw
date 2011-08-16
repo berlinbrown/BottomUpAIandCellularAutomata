@@ -1,0 +1,10 @@
+Version of workspace file format:
+               1
+Time of storage:
+               "Tue Feb 15 01:36:02 Eastern Standard Time 2011"
+Name of the workspace:
+               "hslek"
+File paths of contained packages:
+               ["test\\test.cabal"]
+Maybe file path of an active package:
+               Just "test\\test.cabal"

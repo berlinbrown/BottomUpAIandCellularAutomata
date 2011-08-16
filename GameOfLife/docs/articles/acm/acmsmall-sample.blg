@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: acmsmall-sample.aux
+The style file: acmsmall.bst
+Database file #1: acmsmall-sam.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 10 entries,
+            3084 wiz_defined-function locations,
+            786 strings with 7272 characters,
+and the built_in function-call counts, 7744 in all, are:
+= -- 653
+> -- 606
+< -- 1
++ -- 190
+- -- 190
+* -- 772
+:= -- 1320
+add.period$ -- 41
+call.type$ -- 10
+change.case$ -- 81
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 222
+empty$ -- 464
+format.name$ -- 222
+if$ -- 1517
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 11
+newline$ -- 53
+num.names$ -- 82
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 142
+quote$ -- 0
+skip$ -- 217
+stack$ -- 0
+substring$ -- 369
+swap$ -- 77
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 198
+warning$ -- 0
+while$ -- 68
+width$ -- 0
+write$ -- 145

@@ -1,0 +1,418 @@
+##################################################
+# Notes
+##################################################
+
+g John McCarthy, Marvin Minsky, Allen Newell and Herbert Simon
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% General Structure Notes:
+%%
+%% In my articles, I will question, what is artificial intelligence?
+%%        what is intelligence?  Why is human intelligence more interesting than
+%%     animal intelligence?
+%%
+%% Outline:
+%% 1. Overview
+%%
+%% 3. Basic biology and concepts
+%%     What is DNA?
+%%     What is the mitochondira?
+%%     What is RNA?
+%%     What is life?  Why is it interesting?
+%%
+%%
+%% 2. History of AI and Computing, Turing, VonNue, etc
+%%    History with ALife, Langton, GameOfLife
+%%
+%% Charles Darwin
+%% 1937 Alan Turing -- Brain is a large computer, digital computing machine, organized machine, training, pioneer
+%% 1945 John von Neumann -- cellular automata
+%%
+%% 1970 Cellular automaton, John Conway
+%% 1986 Christopher Langton -- Founder of artificial life
+%%
+%% 4. Modeling the biology
+%% 5. Overview of the demo application, object model
+%%    DNA
+%%    
+%% 6. More detail and code.
+%% 7. Java and Scala Swing / %% 8. Results
+%% 9. Summary and Future Direction
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ Introduction:
+ 
+ Evolutionary processes created machine.
+
+=====================
+
+- Want to avoid practical applications?
+- Look at interesting behavior.
+
+A long standing challenge to evolutarionary theory has been whether it can
+explain the origin of complex organismal features.
+
+A long standing challenge to evolutionary theory has been whether it can
+explain the origin of complex organismal features.
+
+- There wasn't any special that scala provided, good expressive syntax
+
+- The brain doesn't have much function outside of the human body, no context
+  The brain is a tool
+  humans don't have an explicit purpose but our arms, legs do.
+
+As a computational molecular biophysics grad student (i.e. I program and know
+biochem), I disagree with this analogy. Human programming is nowhere near the
+level of complexity of transcription/translation. Here is my attempt at
+comparing programming with DNA:
+
+DNA is the source code. It is transcribed(compiled) to RNA(bytecode), but what
+sections and how often is determined by levels, locations, and conformations of
+DNA, RNA, and proteins. RNA can inhibit or promote transcription of different
+sections, and proteins can do the same, of course dependent on which pieces of
+RNA/proteins and at what levels and what location. RNA is compiled to
+proteins(machine code) in the same way, with the same parameters. Also, at each
+level of code (source code, bytecode, machine code) there is additional
+space/time dependent modification, i.e. the source code or machine code now may
+differ from the source code or machine code in 2 seconds. For example, DNA has
+error-prone copying, can curl up in certain sections and be unavailable for
+"compiling", can have proteins/RNA bind to certain sections and stop the
+compiler(polymerase) from continuing(like a breakpoint), etc.
+
+So essentially you have a self-modifying source code which generates a ton of
+sections of bytecode, all of which can modify the source code, other pieces of
+bytecode, and other pieces of machine code, and a bunch of machine code pieces
+generated from the all the pieces of bytecode which can modify the source-code,
+some of the bytecode, and some of the machine code. The source-code for the
+compiler is also included and is created/modified following the above
+procedures. Oh ya, and throw in the fact that every modification/compilation is
+stochastic and also based on temporal/spatial factors (imagine compilations and
+modifications only happen if a compiler bumps into code, and that movement is
+dictated by diffusion or assistance by a piece of byte or machine code). That is
+biology.
+
+
+
+
+http://www.reddit.com/r/programming/comments/dt16f/dna_seen_through_the_eyes_of_a_coder/
+
+exogenous damage caused by external agents such as
+
+   1. ultraviolet [UV 200-300nm] radiation from the sun
+   2. other radiation frequencies, including x-rays and gamma rays
+   3. hydrolysis or thermal disruption
+   4. certain plant toxins
+   5. human-made mutagenic chemicals, especially aromatic compounds that act as DNA intercalating agents
+   6. cancer chemotherapy and radiotherapy
+   7. viruses [5]
+
+
+start and end of sequence...
+
+Old genes
+
+97% commented out.
+
+digital
+T, C, G and A. 
+
+====
+
+http://ds9a.nl/amazing-dna/
+
+Gene Mutations - point mutations, base-pair substitution, silent mutations, transition mutation, transversion mutations, missense mutations, nonsense mutations, frameshift mutations, insertion, deletion, revertant.
+
+
+Translation: DNA to mRNA to Protein
+
+http://www.genetichealth.com/g101_changes_in_dna.shtml
+
+====
+FALSE: - DNA is only analogous to code. 
+decode a message
+he ordering of the base pairs defines the code
+Because decoding goes from DNA to protein, encoding would have to go from protein to DNA.  But that mechanism is not known to exis
+Encoding in fact goes from the "soup" made of four bases to DNA. 
+
+
+=====
+
+good article on dna
+http://www.cosmicfingerprints.com/dnanotcode.htm
+
+Example java code proxy.
+http://www.khelekore.org/rabbit/
+
+----
+
+ surial, clear ;)
+<surial> paissad: As long as 1 or more variables point to objects, they'll be in memory.
+<surial> if 0 variables point to them, they might still be in memory. Or not. Who cares? JVM makes it all work, its not the kind of thing you need to worry about. Once it makes no possible difference for your running program, no matter WHAT it'll do from this point forward, if that object is still in memory or not, the JVM may at some point remove it to clear up memory.
+* NodoLibero has quit (Quit: Leaving.)
+<surial> paissad: For all practical intents, objects pointed to by static variables exist for the lifetime of the JVM - i.e. for programming, reason like that. But its not actually true, once you look at the technical side, and especially not if you start looking at the 'how much memory will my app take' side.
+<ernimril> if you do webapps or plugin based systems you will need to know the basics of classloaders and statics and how/when unloading can happen
+
+l> (s/both of them/all of them/) correction: paissad: Also, there are literally tens of webapp and plugin frameworks out there. Writing your own is virtually always a horrible plan. The only exception is if you've worked extensively with all of them and found your needs are so spectacularly ill served by every already available solution that starting to build a new one from scratch is a better option than improving what exists and contributing
+<surial> even forking).
+<surial> Weird typo to make.
+
+===
+
+Tex for the impatient.
+http://savannah.gnu.org/projects/teximpatient/
+
+http://www.jmonkeyengine.com/
+
+http://www.alcoholalert.com/drunk-driving-statistics.html
+
+http://programming-scala.labs.oreilly.com/ch07.html
+
+Different cell levels.
+
+1. Cell wall and flagella level
+
+2. Protein, amino acid, Chemical level <---- what is in this level????
+   What is in this level:  chemicals need to maintain the existence of this
+                          property.
+
+   Chemical Reaction between radiation of the sun and the protein on this cell
+   
+   -- Configuration -- proximity...takes energy...no energy force, dead...
+   
+      can a protein grid die??  no???  But more energy to do its job???
+      
+      configuration/count/strength//
+      
+  ProteinUnitGrid.
+                          
+-----
+
+ProteinEnergySynthesisLevel.
+
+Proteins are the "cellular machinery"; they are constantly being synthesized, 
+and play many essential structural and enzymatic roles within the cell.
+
+--- HOW DOES A CELL DIE? protein sythensis is interrupted.
+
+seasons --- more radiaton 
+
+What should the DNA control?
+
+size --- how much protein is created.
+
+grid is actually chemicals, proteins.  we can't change the chemical elements.
+
+should we be able to change the properties of the proteins?
+
+More cell wall protein, less energy to perform that function.
+------
+
+Sun can damage the DNA...
+
+Why is water needed for life?  movement...
+
+Viruses can inhibit growth!!!!
+
+Bacteria CELL:
+DNA FOR PROTEIN SYTHNSEISIS
+
+During protein sythnesis, you are creating the cells.
+
+-- Protein level for cell wall is 100, interaction with sun level
+  ... is 95 on each interation.
+  ... energy level...
+  
+-- Movement thing causes it to move
+=----
+
+DNA is the blueprint...always static...
+
+  1. ---> Cell Wall  AAAAA  (has 2d shape)
+     ---> Protein  -- Cell wall protein xxxxxxxx ---
+             --->> --- amino acid (molecules)
+                          --- chemical elements (C/Carbon, blah)
+           Game Loop / Protein Synthesis Loop
+                            - mainetance of cell activities // transcription translation
+                                
+              ** Each wall cell has a number of proteins
+                    interaction  protect the bacteria from the light!!!
+           
+  2. Flagella
+       --->>> Protein  --- FlagellaProtein
+          --->> amino acid (molecules)
+                    --- chemical elements (C/Carbon, blah)
+             -- Move in water !!!!
+                    
+   3. Food absorber                 
+                    
+!!! Water
+!!! Sunlight
+!!! Food/Algae for our bacteria
+
+Function of your bacteria cell!!!
+
+1. Stay alive (cellular metabolism)
+2. Bacterial metabolism - chemical reaction
+3. Eat
+4. Binary fission.
+                          
+===========
+
+
+Radition given off from the sun...
+
+I need sun light in my expirement.
+
+What is a chemical reaction?
+
+Water?
+
+Food
+
+Bacteria are decomposers. 
+
+====
+
+amino acids are subunits of proteins
+chemical elements are  subunits of amino acids.
+
+Chemical reaction.
+
+====
+
+Flagella, pili, cell walls, cytoplasmic membranes, ribosomes, cytoplasm
+
+Protein is a macromolceule
+Macromolecules that make up cell material
+
+Bacteria has stuff.
+
+Bacteria is a prokaryotic cell.
+Bacteria is a prokaryotic cell
+
+Bacteria has DNA ---
+
+The DNA properties for protein synthesis
+
+Chemical Reaction...
+
+Functions.
+1. Binary Fission, replication  -- proteins
+2. Eat -- proteins
+3. Live -- proteins
+4. Maintain structure -- proteins
+5. Move -- proteins
+
+
+As stated above, bacterial cells can change patterns of enzymes, in order to adapt them to their specific environment. 
+
+-------------------
+
+Chemical Reaction::
+
+Facts:
+
+Amino acids are molecules
+Amino acids are molecules!!!
+
+Key elements of the chemical elements C, H, O, N
+
+Metabolism is a chemical reaction...
+
+===
+What is an amino acid?
+
+What is a mocelule?
+
+
+a protein is a generic term for anything that is made of amino acids
+
+Protein synthesis
+
+-- structural support
+
+Protein synthesis uses about 75 percent of a cell’s energy;
+
+http://arstechnica.com/science/news/2010/10/flipping-evolution-mitochondria-enabled-complexity-not-the-reverse.ars
+
+hey define the codons and determine which amino acids are used to construct proteins
+
+-- proteins make up the machinery
+
+http://www.tutorvista.com/content/biology/biology-iii/gene-expression/proteins-synthesis-mechanism.php
+
+Initiatino, - d polypeptide is released from the ribosome.
+
+What is protein synthesis? -- process in which cells build proteins?
+
+There are several hundred distinct human cell types [1], [2][3]. 
+There are between 50 and 75 trillion cells in the human body.
+
+What is a protein?  What is an amino acide?
+
+
+http://en.wikipedia.org/wiki/Protein
+
+20 standard amino acids; 
+
+-- Cell wall
+-- Chromosome
+-- Plasma membrane
+-- Fibrils
+-- Ribosomes
+
+Protein
+
+The most elaborate viruses are the bacteriophages
+Viruses also carry genes for making proteins that are never incorporated into the 
+virus particle and are found only in infected cells. These viral proteins are 
+called non-structural proteins; they include factors required for the replication 
+of the viral genome and the production of the virus particle.
+
+DNA contains the instructions for a cell's structure and function. It is the blueprints for how the cell runs, reproduces, builds and repairs itself, and every other function necessary for cell life.
+
+Read more: http://wiki.answers.com/Q/What_is_the_role_of_DNA_in_a_cell#ixzz1CxZbGdpC
+
+
+------------------
+
+Amino Acids
+ 
+-- Cell wall
+-- Chromosome
+-- Plasma membrane
+-- Fibrils
+-- Ribosomes
+ 
+ Marcus, Quazi, LinLin, Robert, Sumen
+ 
+ ==============
+ 
+  -- bottom bottom bottom up
+  -- bottom ^ 3 up
+  
+  - Universe, space, time, matter, etc
+  
+  - bottom up:
+  
+  - Earth, water, bacteria
+  
+  - cells, dna, rna
+  
+  - ermgent   
+      
+      -- prokaryotes can travel
+      -- cell feed    
+      
+===========
+
+  - Model food/resources
+  - Model environment/space
+  - Model time
+
+=======
+
+what is the nervous system?
+what is a cell?
+
+humans have 100 trillion cells
