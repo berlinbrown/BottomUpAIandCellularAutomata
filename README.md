@@ -97,7 +97,7 @@
     
 ---------------------------------------
 
-<img src="http://cloud.github.com/downloads/berlinbrown/BottomUpAIandCellularAutomata/render_artificial_life.png" />
+<img src="http://github.com/downloads/berlinbrown/BottomUpAIandCellularAutomata/render_artificial_life.png" />
 
 ---------------------------------------
     
