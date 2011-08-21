@@ -3,6 +3,8 @@
 # Created: 1/11/2011
 ###########################################################
 
+<img src="https://github.com/berlinbrown/BottomUpAIandCellularAutomata/raw/master/media/moreScreenShotThruDemo.png" />
+
     About: BottomUpCellLifeGame
     -----------------------------
     
@@ -64,37 +66,6 @@
     Berlin Brown - berlin dot brown _at_ gmail dot com
     keywords: cells, dna, replication, gameoflife, scala, java, alife, artificiallife
 	
----------------------------------------
-
- Towards Strong AI through Artificial Life, Computational Biology
-  Here are relevant fields of study:
-
-  +---------------+
-  | Biology       |
-  |               +
-  +---------------|
-                  |
-  +---------------|
-  |Chemistry      |
-  |               |
-  +---------------|
-                  |            +---------------+  +------------------------+ +--------------------+
-  +---------------|            | Artifial Life |  |Emergent Behavior       | | Art Lifeforms      |
-  |Physics        +------------>               |  |------------------------| |--------------------|
-  |               |            |               |  |                        | |                    |
-  |               |            |               |  |                        | |                    |
-  +---------------+            +---------------+  |                        | |                    |
-                                                  |                        | |                    |
-  +----------------+                              |                        | |                    |
-  |Mathematics     |                              +------------------------+ +--------------------+
-  |                |
-  +----------------+
-  +----------------+
-  |Computer        |
-  |Science         |
-  |                |
-  +----------------+
-    
 ---------------------------------------
 
 <img src="http://github.com/downloads/berlinbrown/BottomUpAIandCellularAutomata/render_artificial_life.png" />
